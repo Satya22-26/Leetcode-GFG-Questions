@@ -19,8 +19,7 @@ public:
         //calc at each node
         if(root->val>mx)mx=root->val;
         if(root->val<mn)mn=root->val;
-        int tmp=max(abs(mx-root->val),abs(mn-root->val));
-        ans=max(ans,tmp);
+        ans=max(ans,abs(mx-mn));
         Helper(root->left,mx,mn);
         Helper(root->right,mx,mn);
     }
